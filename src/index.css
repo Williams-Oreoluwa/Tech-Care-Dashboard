@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: manrope;
+  src: url("/fonts/static/Manrope-Regular.ttf");
+}
+
+div{
+  font-family: manrope;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #E3E4E6;
+  border-radius: 5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3rem;
+}
+
+.tab-scroll-bar::-webkit-scrollbar-thumb {
+  background: #E3E4E6;
+  border-radius: 3rem;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+background: transparent;
+} */
