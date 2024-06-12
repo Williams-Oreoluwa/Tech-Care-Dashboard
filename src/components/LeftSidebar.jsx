@@ -5,13 +5,13 @@ const LeftSidebar = () => {
   const { users } = useContext(Globalcontext);
 
   return (
-    <main className="w-full rounded-lg bg-[#FFFFFF] pb-[1rem]">
+    <main className="w-full  rounded-lg bg-[#FFFFFF] pb-[1rem]">
       <div className=" flex flex-col gap-4">
         <div className=" w-full flex items-center justify-between gap-4 px-3 py-5">
           <h2 className="text-[24px] font-bold">Patients</h2>
           <img src="/assets/search_FILL0_wght300_GRAD0_opsz24.svg" alt="" />
         </div>
-        <div className="flex flex-col gap-6 h-[1054px] overflow-y-auto  items-start justify-between px-4">
+        <div className="relative flex flex-col gap-6 h-[140vh] overflow-y-auto  items-start justify-between px-4">
           {users.map((user) => {
             return (
               <>
@@ -19,7 +19,7 @@ const LeftSidebar = () => {
                   <div className="flex flex-row gap-3 items-center justify-between">
                     <img
                       src={user.profile_picture}
-                      alt=""
+                      alt={user.name}
                       className="w-[44px] h-[44px] rounded-[50%]"
                     />
                     <div className="flex flex-col  ">

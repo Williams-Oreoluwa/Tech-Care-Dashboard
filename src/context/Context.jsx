@@ -1,41 +1,37 @@
 import axios from "axios";
 import {
   createContext,
-  useCallback,
   useEffect,
-  useMemo,
   useState,
 } from "react";
 import { baseURI } from "../api/GetData";
+
 export const Globalcontext = createContext();
 
 export const GlobalState = ({ children }) => {
   const [users, setUser] = useState([]);
   const [jessicaData, setjessicaData] = useState({
-    name:"",
-    age:"",
-    gender:"",
-    profile_picture:"",
-    date_of_birth:"",
-    emergency_contact:"",
-    insurance_type:"",
-    phone_number:""
-
-
+    name: "",
+    age: "",
+    gender: "",
+    profile_picture: "",
+    date_of_birth: "",
+    emergency_contact: "",
+    insurance_type: "",
+    phone_number: "",
   });
 
+  const [labResults, setLabResults] = useState([]);
 
+  const [diagnosticsList, setDiagnosticsLists] = useState([]);
 
-  const [loading, setLoading] = useState(false)
+  const Username = "coalition";
 
- const Username ='coalition'
+  const Password = "skills-test";
 
-const Password ="skills-test"
-
-let auth = btoa(`${Username}:${Password}`);
+  let auth = btoa(`${Username}:${Password}`);
 
   const userData = async () => {
-    setLoading(true);
     try {
       const response = await axios.get(
         `${baseURI}`,
@@ -47,16 +43,17 @@ let auth = btoa(`${Username}:${Password}`);
         }
       );
       console.log(response.data);
-      console.table(response.data[3]);
+      console.table(response.data[3].lab_results);
+      console.table(response.data[3].diagnostic_list);
+      setDiagnosticsLists(response.data[3].diagnostic_list);
+      setLabResults(response.data[3].lab_results);
 
-      setjessicaData(response.data[3])
-   
-      setUser(response.data)
-    //   console.log(user.name)
+      setjessicaData(response.data[3]);
 
-      
+      setUser(response.data);
+      //   console.log(user.name)
     } catch (error) {
-      console.log("error");
+      throw new Error("Something went wrong!!!");
     }
   };
 
@@ -64,14 +61,14 @@ let auth = btoa(`${Username}:${Password}`);
     userData();
   }, []);
 
- 
   return (
     <>
       <Globalcontext.Provider
         value={{
-        users,
-        jessicaData
-        
+          users,
+          jessicaData,
+          labResults,
+          diagnosticsList,
         }}
       >
         {children}

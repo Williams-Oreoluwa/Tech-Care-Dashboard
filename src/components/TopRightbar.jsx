@@ -6,7 +6,6 @@ const TopRightbar = () => {
 
   const {
     name,
-    age,
     gender,
     profile_picture,
     date_of_birth,
@@ -15,15 +14,15 @@ const TopRightbar = () => {
     phone_number,
   } = jessicaData;
   return (
-    <main className="bg-[#FFFFFF] w-full py-[32px] p-4 rounded-lg flex flex-col gap-6">
+    <main className="bg-[#FFFFFF] w-full py-5  p-4 rounded-lg flex flex-col  justify-evenly gap-6">
       <div className="flex flex-col items-center gap-3 justify-center">
         <div>
           <img src={profile_picture} alt={name}  className="w-[140px] h-[140px] rounded-md"/>
         </div>
         <h2 className="text-[24px] font-bold">{name}</h2>
       </div>
-
-      <div className="flex flex-col items-start justify-center gap-4">
+      <div>
+      <div className="flex flex-col items-start justify-between  gap-2 xl:justify-evenly xl:gap-10">
         <div className="flex items-center justify-center gap-4">
           <img src="/assets/BirthIcon.svg" alt="" />
           <div className="flex flex-col">
@@ -60,6 +59,10 @@ const TopRightbar = () => {
           </div>
         </div>
       </div>
+
+      </div>
+
+     
       <div className="flex items-center justify-center">
         <button className="text-[black] bg-[#01F0D0] rounded-[6rem] p-3 w-[70%]">
           show all informatons
