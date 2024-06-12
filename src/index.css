@@ -12,6 +12,10 @@ div{
   font-family: manrope;
 }
 
+tr{
+  height: .4px;
+}
+
 
 /* width */
 ::-webkit-scrollbar {
