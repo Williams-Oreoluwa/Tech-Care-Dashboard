@@ -4,15 +4,17 @@ import LeftSidebar from "../components/LeftSidebar";
 import TopRightbar from "../components/TopRightbar";
 import BottomRightbar from "../components/BottomRightbar";
 import CentreBottombar from "../components/CentreBottombar";
+import Graph from "../components/Graph";
 
 const Dashboard = () => {
   return (
-    <div className=" flex items-center justify-center">
-      <main className="max-w-[1850px] min-h-screen flex flex-col gap-4 bg-[#F6F7F8] w-full font-manrope p-5">
+    <div className="flex items-center justify-center">
+      <main className="max-w-[1850px]  flex flex-col gap-4 bg-[#F6F7F8] w-full font-manrope p-5">
         <Navbar />
-        <div className="grid grid-cols-[367px,1fr,330px]">
+        <div className="grid grid-cols-[367px,1fr,300px]">
           <LeftSidebar />
-          <div>
+          <div className="flex flex-col gap-4 xl:grid-rows-none">
+            <Graph />
             <CentreBottombar />
           </div>
 
