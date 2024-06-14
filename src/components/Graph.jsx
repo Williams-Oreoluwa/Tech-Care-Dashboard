@@ -113,7 +113,7 @@ const Graph = () => {
                 />
               </div>
             </div>
-            <Line data={data} options={options} width={500} height={300} />
+            <Line data={data} options={options} width={300} height={300} />
           </div>
           <div className="flex-1">
             <div className="flex flex-col gap-[1rem]">
