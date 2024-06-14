@@ -18,7 +18,7 @@ const Dashboard = () => {
             <CentreBottombar />
           </div>
 
-          <div className="grid grid-rows-[1fr,330px] xl:grid-rows-none gap-4">
+          <div className="grid grid-rows-[90%,1fr] xl:grid-rows-none gap-4">
             <TopRightbar />
             <BottomRightbar />
           </div>

@@ -11,7 +11,7 @@ const LeftSidebar = () => {
           <h2 className="text-[24px] font-bold">Patients</h2>
           <img src="/assets/search_FILL0_wght300_GRAD0_opsz24.svg" alt="" />
         </div>
-        <div className="relative flex flex-col gap-6 h-[140vh] overflow-y-auto  items-start justify-between px-4">
+        <div className="relative flex flex-col gap-6 h-[180vh] overflow-y-auto  items-start justify-between px-4">
           {users.map((user) => {
             return (
               <>
