@@ -53,8 +53,7 @@ const Navbar = () => {
                 <div
                   key={index}
                   className={`flex gap-2 items-center justify-center font-bold ${
-                    patients ? "p-3 px-5 bg-[#01F0D0] rounded-[5rem]" : ""
-                  }`}
+                    patients && "p-3 px-5 bg-[#01F0D0] rounded-[5rem]"}`}
                 >
                   <img src={img} alt={name} className="w-[15px] h-[17px]" />
                   <h2 className="text-[14px]">{name}</h2>

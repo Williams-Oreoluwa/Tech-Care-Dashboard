@@ -31,7 +31,7 @@ const Cards = ({
             <h1 className="text-[31px] leading-[41px] font-bold">{`${averageHeartRate} bpm`}</h1>
           </div>
           <div className="flex items-center justify-center gap-3">
-            <img src="/assets/ArrowDown.svg" alt="" />
+            
             <h3>Normal</h3>
           </div>
         </div>
