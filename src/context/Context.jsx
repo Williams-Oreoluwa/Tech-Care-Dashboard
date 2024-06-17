@@ -48,6 +48,7 @@ const reducer = (state, action) => {
 export const GlobalState = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  //User credentials
   const UserName = import.meta.env.VITE_USER_NAME;
   const Password = import.meta.env.VITE_PASSWORD;
   const baseURI =  import.meta.env.VITE_BASE_URI
