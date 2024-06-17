@@ -19,7 +19,7 @@ const Cards = ({
         <div className="flex flex-col items-start justify-start gap-3 bg-[#FFE6E9] rounded-lg p-3">
           <img src="/assets/temperature.svg" alt="" />
           <div>
-            <h2>Temperature</h2>
+            <h2>Temperature</h2> 
             <h1 className="text-[31px] leading-[41px] font-bold">{`${averageTemperature} °F`}</h1>
           </div>
           <h3>Normal</h3>
