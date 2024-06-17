@@ -76,6 +76,9 @@ export const GlobalState = ({ children }) => {
       });
       dispatch({ type: stateData.setJessicaData, payload: response.data[3] });
       dispatch({ type:  stateData.setUsers, payload: response.data });
+   
+
+    
     } catch (error) {
       throw new Error("Something went wrong!!!");
     }
@@ -85,6 +88,12 @@ export const GlobalState = ({ children }) => {
     userData();
   }, []);
 
+
+  // console.log(state.users)
+
+  //Get users medical history
+
+ 
   const systolicData = state.history.map(
     (item) => item.blood_pressure.systolic.value
   );
@@ -97,8 +106,18 @@ export const GlobalState = ({ children }) => {
   const heartRateValue = state.history.map((item) => item.heart_rate.value);
   const temperatureValue = state.history.map((item) => item.temperature.value);
 
-  const systolic = systolicData.slice(0, 6);
-  const diastolic = diastolicData.slice(0, 6);
+  const systolicDataSliced = systolicData.slice(0, 6);
+  const diastolicDataSliced = diastolicData.slice(0, 6);
+
+  //Reverse array to suit calender for last 6 months
+
+  const systolic = systolicDataSliced.reverse()
+
+  const diastolic = diastolicDataSliced.reverse()
+
+  console.log(systolic)
+
+  //Get average values for data
 
   const getAverage = (array) => {
     const sum = array.reduce((a, b) => a + b, 0);
