@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { GlobalState } from "./context/Context.jsx";
 
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <GlobalState>

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { createContext, useEffect, useReducer, useMemo } from "react";
-import { baseURI } from "../api/GetData";
+import { createContext, useEffect, useReducer } from "react";
+
 
 export const Globalcontext = createContext();
 
@@ -29,7 +29,6 @@ const stateData = {
   setHistory: "SET_HISTORY",
 };
 const reducer = (state, action) => {
-
   switch (action.type) {
     case stateData.setUsers:
       return { ...state, users: action.payload };
@@ -48,11 +47,13 @@ const reducer = (state, action) => {
 
 export const GlobalState = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const Username = "coalition";
-  const Password = "skills-test";
+
+  const UserName = import.meta.env.VITE_USER_NAME;
+  const Password = import.meta.env.VITE_PASSWORD;
+  const baseURI =  import.meta.env.VITE_BASE_URI
 
   // Fetch Data
-  let auth = btoa(`${Username}:${Password}`);
+  let auth = btoa(`${UserName}:${Password}`);
 
   const userData = async () => {
     try {
@@ -75,10 +76,7 @@ export const GlobalState = ({ children }) => {
         payload: response.data[3].lab_results,
       });
       dispatch({ type: stateData.setJessicaData, payload: response.data[3] });
-      dispatch({ type:  stateData.setUsers, payload: response.data });
-   
-
-    
+      dispatch({ type: stateData.setUsers, payload: response.data });
     } catch (error) {
       throw new Error("Something went wrong!!!");
     }
@@ -88,12 +86,10 @@ export const GlobalState = ({ children }) => {
     userData();
   }, []);
 
-
   // console.log(state.users)
 
   //Get users medical history
 
- 
   const systolicData = state.history.map(
     (item) => item.blood_pressure.systolic.value
   );
@@ -111,11 +107,11 @@ export const GlobalState = ({ children }) => {
 
   //Reverse array to suit calender for last 6 months
 
-  const systolic = systolicDataSliced.reverse()
+  const systolic = systolicDataSliced.reverse();
 
-  const diastolic = diastolicDataSliced.reverse()
+  const diastolic = diastolicDataSliced.reverse();
 
-  console.log(systolic)
+  console.log(systolic);
 
   //Get average values for data
 
@@ -141,7 +137,6 @@ export const GlobalState = ({ children }) => {
         averageTemperature,
         systolic,
         diastolic,
-        
       }}
     >
       {children}
