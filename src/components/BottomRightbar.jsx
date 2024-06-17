@@ -12,7 +12,7 @@ const BottomRightbar = () => {
           </h2>
         </div>
         <div className="">
-        <div className="w-full  py-[2rem] p-4 flex flex-col gap-3 overflow-y-scroll h-[13rem]">
+        <div className="w-full  py-[2rem] p-4 flex flex-col gap-3 overflow-y-scroll h-[15.5rem]">
           {labResults.map((list, index) => {
             return (
               <>

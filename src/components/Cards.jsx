@@ -7,7 +7,7 @@ const Cards = ({
 }) => {
   return (
     <main>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-3">
         <div className="flex flex-col items-start justify-start gap-3 bg-[#E0F3FA] rounded-lg p-3">
           <img src="/assets/respiratory rate.svg" alt="" />
           <div>
