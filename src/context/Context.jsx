@@ -122,6 +122,7 @@ export const GlobalState = ({ children }) => {
         averageTemperature,
         systolic,
         diastolic,
+        
       }}
     >
       {children}
