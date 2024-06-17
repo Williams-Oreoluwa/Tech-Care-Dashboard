@@ -5,13 +5,13 @@ const LeftSidebar = () => {
   const { users } = useContext(Globalcontext);
 
   return (
-    <main className="min-h-screen w-full  rounded-lg bg-[#FFFFFF] pb-[1rem]">
+    <main className="relative min-h-screen w-full  rounded-lg bg-[#FFFFFF] pb-[1rem]">
       <div className=" flex flex-col gap-4">
         <div className=" w-full flex items-center justify-between gap-4 px-3 py-5">
           <h2 className="text-[24px] font-bold">Patients</h2>
           <img src="/assets/search_FILL0_wght300_GRAD0_opsz24.svg" alt="" />
         </div>
-        <div className="relative flex flex-col gap-6 h-[160vh] overflow-y-auto  items-start justify-between px-4">
+        <div className="relative flex flex-col gap-6 h-[169vh] overflow-y-auto  items-start justify-between px-4">
           {users.map((user) => {
             return (
               <>

@@ -11,7 +11,7 @@ const Dashboard = () => {
     <div className="flex items-center justify-center bg-[#F6F7F8]" >
       <main className="max-w-[1650px] flex flex-col gap-4  w-full font-manrope p-5">
         <Navbar />
-        <div className="grid grid-cols-[367px,1fr,357px]">
+        <div className="grid grid-cols-[367px,1fr,337px]">
           <LeftSidebar />
           <div className="flex flex-col gap-4 xl:grid-rows-none">
             <Graph />
