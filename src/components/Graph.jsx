@@ -53,6 +53,7 @@ const Graph = () => {
         pointRadius: 5, // Increase point size
         pointBackgroundColor: "#E66FD2",
         pointHoverRadius: 7, // Increase hover point size
+        
       },
       {
         label: "",

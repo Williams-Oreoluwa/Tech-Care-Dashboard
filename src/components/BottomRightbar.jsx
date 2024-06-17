@@ -5,13 +5,14 @@ const BottomRightbar = () => {
   const { labResults } = useContext(Globalcontext);
   return (
     <main className="w-full rounded-md bg-[#FFFFFF] ">
-      <div className="flex flex-col gap-3 p-3">
+      <div className=" h-2 flex flex-col gap-3 p-3">
         <div>
           <h2 className="capitalize text-[#072635] font-bold  text-[24px]">
             lab results
           </h2>
         </div>
-        <div className="py-[2rem] p-4 flex flex-col gap-3 overflow-y-auto h-[35vh]">
+        <div className="">
+        <div className="w-full  py-[2rem] p-4 flex flex-col gap-3 overflow-y-scroll h-[13rem]">
           {labResults.map((list, index) => {
             return (
               <>
@@ -29,6 +30,8 @@ const BottomRightbar = () => {
             );
           })}
         </div>
+        </div>
+       
       </div>
     </main>
   );

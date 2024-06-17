@@ -17,8 +17,9 @@ const LeftSidebar = () => {
               <>
                 <div
                   className={`cursor-pointer w-full flex items-center justify-between p-2 ${
-                    user.name === "Jessica Taylor" &&
-                    "bg-[#D8FCF7] pr-3 rounded-md"
+                    user.name === "Jessica Taylor"
+                      ? "bg-[#D8FCF7] pr-3 rounded-md"
+                      : ""
                   }`}
                 >
                   <div className="flex flex-row gap-3 items-center justify-between">
