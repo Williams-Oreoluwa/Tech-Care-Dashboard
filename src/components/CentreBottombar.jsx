@@ -11,7 +11,7 @@ const CentreBottombar = () => {
           <h2>diagnostics list</h2>
         </div>
 
-        <div className="max-h-[370px] overflow-auto">
+        <div className="max-h-[350px] overflow-auto">
           <table className="w-full text-left">
             <thead className="sticky top-0 bg-[#F6F7F8]">
               <tr className="text-[14px] font-bold text-[#072635]">

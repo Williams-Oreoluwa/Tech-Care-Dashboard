@@ -11,14 +11,14 @@ const Dashboard = () => {
     <div className="flex items-center justify-center bg-[#F6F7F8]" >
       <main className="max-w-[1650px] flex flex-col gap-4  w-full font-manrope p-5">
         <Navbar />
-        <div className="grid grid-cols-[367px,1fr,300px]">
+        <div className="grid grid-cols-[367px,1fr,357px]">
           <LeftSidebar />
-          <div className="grid grid-rows-[80%,1fr] gap-4 xl:grid-rows-none">
+          <div className="flex flex-col gap-4 xl:grid-rows-none">
             <Graph />
             <CentreBottombar />
           </div>
 
-          <div className=" grid grid-rows-[1fr,1250px] xl:grid-rows-none gap-4">
+          <div className="flex flex-col justify-stretch xl:grid-rows-none gap-4">
             <TopRightbar />
             <BottomRightbar />
           </div>

@@ -99,7 +99,7 @@ const Graph = () => {
           Diagnosis history
         </h1>
         <br />
-        <br />
+        
         <div className="grid grid-cols-[1fr,200px] gap-5 bg-[#F4F0FE] pb-[2rem] p-3 rounded-[.8rem]">
           <div>
             <div className="flex  justify-between mb-4">
@@ -114,7 +114,7 @@ const Graph = () => {
                 />
               </div>
             </div>
-            <Line data={data} options={options} width={300} height={300} />
+            <Line data={data} options={options} width={300} height={287} />
           </div>
           <div className="flex-1">
             <div className="flex flex-col gap-[1rem]">

@@ -5,7 +5,7 @@ const BottomRightbar = () => {
   const { labResults } = useContext(Globalcontext);
   return (
     <main className="w-full rounded-md bg-[#FFFFFF] ">
-      <div className=" h-2 flex flex-col gap-3 p-3">
+      <div className="flex flex-col gap-3 p-3">
         <div>
           <h2 className="capitalize text-[#072635] font-bold  text-[24px]">
             lab results

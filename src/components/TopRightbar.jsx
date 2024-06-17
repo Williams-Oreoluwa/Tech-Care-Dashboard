@@ -14,7 +14,7 @@ const TopRightbar = () => {
     phone_number,
   } = jessicaData;
   return (
-    <main className="bg-[#FFFFFF] w-full  p-4 rounded-lg flex flex-col justify-evenly gap-6">
+    <main className="bg-[#FFFFFF] w-full  p-4 rounded-lg flex flex-col gap-6">
       <div className="flex flex-col items-center gap-3 justify-center">
         <div>
           <img
