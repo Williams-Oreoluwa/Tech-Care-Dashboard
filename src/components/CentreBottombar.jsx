@@ -5,40 +5,34 @@ const CentreBottombar = () => {
   const { diagnosticsList } = useContext(Globalcontext);
 
   return (
-    <main className="px-3  w-full cursor-pointer">
+    <main className="px-3 w-full cursor-pointer">
       <div className="flex flex-col gap-5 bg-[#FFFF] rounded-lg p-5">
         <div className="text-[24px] font-bold capitalize">
           <h2>diagnostics list</h2>
         </div>
 
-        <table className="flex-col gap-16 text-left">
-          <thead>
-            <tr className="text-[14px] font-bold text-[#072635] bg-[#F6F7F8] p-[10rem] rounded-[5rem]">
-              <th className="p-[.75rem] rounded-l-[5rem]">
-                Problem/Diagnostics
-              </th>
-              <th className="p-[.75rem]">Description</th>
-              <th className="p-[.75rem] rounded-r-[5rem]">Status</th>
-            </tr>
-          </thead>
-          <br />
-          <tbody className="h-[2px]">
-            {diagnosticsList.map((data, index) => {
-              return (
-                <>
-                  <tr
-                    key={index}
-                    className="ml-[3rem] text-[14px] leading-[24px] border-b-[1px] border-[#F6F7F8]"
-                  >
-                    <td className="p-[.85rem]">{data.name}</td>
-                    <td className="p-[.85rem]">{data.description}</td>
-                    <td className="p-[.85rem]">{data.status}</td>
-                  </tr>
-                </>
-              );
-            })}
-          </tbody>
-        </table>
+        <div className="max-h-[370px] overflow-auto">
+          <table className="w-full text-left">
+            <thead className="sticky top-0 bg-[#F6F7F8]">
+              <tr className="text-[14px] font-bold text-[#072635]">
+                <th className="p-[.75rem] rounded-l-[5rem]">Problem/Diagnostics</th>
+                <th className="p-[.75rem]">Description</th>
+                <th className="p-[.75rem] rounded-r-[5rem]">Status</th>
+              </tr>
+            </thead>
+            <br />
+            <tbody>
+              {diagnosticsList.map((data, index) => (
+                <tr key={index} className="text-[14px] leading-[24px] border-b-[1px] border-[#F6F7F8]">
+                  <td className="p-[.85rem]">{data.name}</td>
+                  <td className="p-[.85rem]">{data.description}</td>
+                  <td className="p-[.85rem]">{data.status}</td>
+                </tr>
+              ))}
+              
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
   );
