@@ -22,7 +22,7 @@ const initialState = {
 };
 
 const stateData = {
-  setUsers: "SET_USERS",
+  setPatients: "SET_USERS",
   setJessicaData: "SET_JESSICA_DATA",
   setLabResults: "SET_LAB_RESULTS",
   setDiagnosticsList: "SET_DIAGNOSTICS_LIST",
@@ -30,7 +30,7 @@ const stateData = {
 };
 const reducer = (state, action) => {
   switch (action.type) {
-    case stateData.setUsers:
+    case stateData.setPatients:
       return { ...state, users: action.payload };
     case stateData.setJessicaData:
       return { ...state, jessicaData: action.payload };
@@ -77,7 +77,7 @@ export const GlobalState = ({ children }) => {
         payload: response.data[3].lab_results,
       });
       dispatch({ type: stateData.setJessicaData, payload: response.data[3] });
-      dispatch({ type: stateData.setUsers, payload: response.data });
+      dispatch({ type: stateData.setPatients, payload: response.data });
     } catch (error) {
       throw new Error("Something went wrong!!!");
     }
