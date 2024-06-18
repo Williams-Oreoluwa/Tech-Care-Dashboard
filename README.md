@@ -5,4 +5,4 @@
 # Repo name
 https://github.com/Williams-Oreoluwa/Tech-Care-Dashboard/
 # Find details of live link below
-https://tech-care-dashboard.vercel.app/
+https://techcare11.netlify.app/
